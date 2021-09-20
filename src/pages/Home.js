@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
-export class Home extends Component {
-    render() {
+const Home = () => {
         return (
+            <>
+            <Header/>
             <div>
                 <h2>Home</h2>
             </div>
+            <Footer/>
+            </>
         )
-    }
 }
 
-export default Home
+export default Home;
