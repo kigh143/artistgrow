@@ -6,12 +6,13 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import How from "../components/How";
 import Project from "../components/Project";
+import Question from "../components/Question";
 
-const Home = () => {
+const Start = () => {
   return (
     <div className="container bg-gray-700 p-0">
       <Header />
-      <Hero title="Be a true fan of your favorite artist." />
+      <Hero title="Get your true fans’ support." />
       <div className="py-10 px-10 my-10 text-white">
         <div className="my-4">
           <h1 className="text-2xl font-bold text-green-300">WHY ARTIST GROW</h1>
@@ -19,8 +20,32 @@ const Home = () => {
         </div>
 
         <div className="row text-white">
+          <div className="col-md-2"></div>
+
           <div className="col-md-4 text-center">
-            <div className="p-10 bg-gray-600 m-2 shadow">
+            <img src="./p.png" style={{ width: "30%" }} />
+          </div>
+
+          <div className="col-md-4 text-center h-full">
+            <div className="p-10  m-2 ">
+              <div
+                style={{ height: 70, width: 70, borderRadius: 35 }}
+                className="bg-green-200 mx-auto my-4"
+              ></div>
+              <h2 className="text-2xl font-bold text-green-300 my-2">
+                Reward-based funding
+              </h2>
+              <p>
+                In addition, he has released his first solo album and his first
+                album as a duo. He has toured the United States, Europe and
+                South America.
+              </p>
+            </div>
+          </div>
+          <div className="col-md-2"></div>
+          <div className="col-md-2"></div>
+          <div className="col-md-4 text-center h-full">
+            <div className="p-10 m-2">
               <div
                 style={{ height: 70, width: 70, borderRadius: 35 }}
                 className="bg-green-200 mx-auto my-4"
@@ -37,50 +62,15 @@ const Home = () => {
           </div>
 
           <div className="col-md-4 text-center">
-            <div className="p-10 bg-gray-600 m-2 shadow">
-              <div
-                style={{ height: 70, width: 70, borderRadius: 35 }}
-                className="bg-green-200 mx-auto my-4"
-              ></div>
-              <h2 className="text-2xl font-bold text-green-300 my-2">
-                Manage access.
-              </h2>
-              <p>
-                In addition, he has released his first solo album and his first
-                album as a duo. He has toured the United States, Europe and
-                South America.
-              </p>
-            </div>
+            <img src="./p.png" style={{ width: "30%" }} />
           </div>
-
-          <div className="col-md-4 text-center">
-            <div className="p-10 bg-gray-600 m-2 shadow">
-              <div
-                style={{ height: 70, width: 70, borderRadius: 35 }}
-                className="bg-green-200 mx-auto my-4"
-              ></div>
-              <h2 className="text-2xl font-bold text-green-300 my-2">
-                Manage access.{" "}
-              </h2>
-              <p>
-                In addition, he has released his first solo album and his first
-                album as a duo. He has toured the United States, Europe and
-                South America.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-12 text-center my-10">
-            <Link to="/about" className="btn btn-light btn-lg">
-              Read More
-            </Link>
-          </div>
+          <div className="col-md-2"></div>
         </div>
 
         <div className="my-10">
           <hr style={{ borderColor: "#fff" }} className="my-4" />
           <h1 className="text-2xl font-bold text-green-300">HOW IT WORKS</h1>
-          <p>HOW IT WORKS STEP BY STEP GUIDE ON HOW TO FUND A PROJECT.</p>
+          <p>STEP BY STEP GUIDE ON HOW TO START A PROJECT..</p>
           <br />
           <br />
           <div className="row">
@@ -120,55 +110,19 @@ const Home = () => {
           <hr style={{ borderColor: "#fff" }} className="my-4" />
           <div className="flex justify-between">
             <div>
-              <h1 className="text-2xl font-bold text-green-300">
-                FEATURED ARTISTS
-              </h1>
-              <p>ARTISTS FROM ALL OVER THE WORLD</p>
-            </div>
-            <div>
-              <Link to="/artists" className="btn btn-lg btn-light">
-                View All
-              </Link>
+              <h1 className="text-2xl font-bold text-green-300">FAQs</h1>
+              <p>STEP BY STEP GUIDE ON HOW TO FUND A PROJECT.</p>
             </div>
           </div>
-
           <br />
           <br />
           <div className="row">
             {[1, 2, 3].map((how) => (
               <div className="col-md-4 my-4">
-                <Artist />
+                <Question />
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="my-10">
-          <br />
-          <br />
-
-          <hr style={{ borderColor: "#fff" }} className="my-4" />
-
-          <div className="flex justify-between">
-            <div>
-              <h1 className="text-2xl font-bold text-green-300">
-                FEATURED PROJECTS
-              </h1>
-              <p>HELP YOUR FAVORITE ARTISTS BRING THEIR PROJECT TO LIVE.</p>
-            </div>
-            <div>
-              <Link to="/projects" className="btn btn-lg btn-light">
-                View All
-              </Link>
-            </div>
-          </div>
-          <br />
-          <br />
-          {[1, 2].map((how) => (
-            <div className="my-10">
-              <Project />
-            </div>
-          ))}
         </div>
       </div>
       <Footer />
@@ -176,4 +130,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Start;

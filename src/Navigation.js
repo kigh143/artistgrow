@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -6,6 +6,7 @@ import Artists from "./pages/Artists";
 import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 import Login from "./pages/Login";
+import Start from "./pages/Start";
 
 const Navigation = () => {
   return (
@@ -17,6 +18,7 @@ const Navigation = () => {
         <Route exact path="/artists" component={Artists} />
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/project/:id" component={ProjectDetails} />
+        <Route exact path="/start" component={Start} />
       </Switch>
     </Router>
   );

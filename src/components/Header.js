@@ -23,7 +23,7 @@ const Header = () => {
           <Link to="/about" className="mx-4 font-bold uppercase">
             About
           </Link>
-          <Link to="/blog" className="mx-4 font-bold uppercase">
+          <Link to="/start" className="mx-4 font-bold uppercase">
             Start Project
           </Link>
           <div className="px-10">
