@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div
         style={{ height: 200, position: "relative" }}
-        className="bg-gray-700 border-t"
+        className="bg-gray-800 border-t"
       >
         <div className="m-auto w-1/2 justify-center items-center">
           <div

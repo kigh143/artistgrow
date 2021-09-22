@@ -7,6 +7,11 @@ import Projects from "./pages/Projects";
 import ProjectDetails from "./pages/ProjectDetails";
 import Login from "./pages/Login";
 import Start from "./pages/Start";
+import AddProjects from "./pages/AddProject";
+import AddPerson from "./pages/AddPerson";
+import AddReward from "./pages/AddReward";
+import Artist from "./pages/Artist";
+import Fan from "./pages/Fan";
 
 const Navigation = () => {
   return (
@@ -19,6 +24,11 @@ const Navigation = () => {
         <Route exact path="/projects" component={Projects} />
         <Route exact path="/project/:id" component={ProjectDetails} />
         <Route exact path="/start" component={Start} />
+        <Route exact path="/addPerson" component={AddPerson} />
+        <Route exact path="/addProject" component={AddProjects} />
+        <Route exact path="/addReward" component={AddReward} />
+        <Route exact path="/fan" component={Fan} />
+        <Route exact path="/artist" component={Artist} />
       </Switch>
     </Router>
   );

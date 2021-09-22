@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 const Hero = ({ title }) => {
   return (
@@ -11,12 +12,12 @@ const Hero = ({ title }) => {
           {title}
         </h1>
         <div className="py-10">
-          <button className="btn btn-success mr-4 btn-lg">
+          <Link to="/projects" className="btn btn-success mr-4 btn-lg">
             FUND A PROJECT
-          </button>
-          <button className="btn btn-outline-success btn-lg">
+          </Link>
+          <Link to="/addPerson" className="btn btn-outline-success btn-lg">
             START A PROJECT
-          </button>
+          </Link>
         </div>
       </div>
     </div>

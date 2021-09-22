@@ -1,20 +1,58 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { api } from "../apis";
 
 const Login = () => {
   const [isNew, setIsNew] = useState(false);
   const history = useHistory();
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [confirmPassword, setConfirmPassword] = useState(null);
+  const [name, setName] = useState(null);
+  const [type, setType] = useState(null);
 
-  const login = () => {
-    history.push("/");
+  const login = (e) => {
+    e.preventDefault();
+    const payload = {
+      email,
+      password,
+    };
+    console.log(payload);
+    api
+      .loginUser(payload)
+      .then((result) => {
+        console.log(result);
+        // history.push("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-  const signUp = () => {
-    history.push("/");
+  const signUp = (e) => {
+    e.preventDefault();
+    const payload = {
+      email,
+      password,
+      confirm_password: confirmPassword,
+      fullName: name,
+      user_type: type,
+    };
+    console.log(payload);
+
+    api
+      .registerUser(payload)
+      .then((result) => {
+        console.log(result);
+        // history.push("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
     <div className="row" style={{ height: "100vh", padding: 0, margin: 0 }}>
-      <div className="col-md-6  flex justify-center items-center">
+      <div className="col-md-6  flex justify-center items-center bg-white">
         <img src="./music.png" />
       </div>
       <div className="col-md-6 bg-gray-800 flex justify-center items-center text-white">
@@ -26,7 +64,20 @@ const Login = () => {
               </h3>
               <p>Contribute to the growth of your favorite artists</p>
             </div>
-            <form className="bg-gray-700 py-10 px-10 shadow">
+            <form className="bg-gray-800 py-10 px-10 shadow">
+              <div className="mb-3">
+                <label for="exampleInputEmail1" className="form-label">
+                  User type
+                </label>
+                <select
+                  class="form-select"
+                  aria-label="Default select example"
+                  onChange={(e) => setType(e.target.value)}
+                >
+                  <option value="fan">Fan</option>
+                  <option value="artist">Artists</option>
+                </select>
+              </div>
               <div className="mb-3">
                 <label for="exampleInputEmail1" className="form-label">
                   Full Name
@@ -36,6 +87,7 @@ const Login = () => {
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="mb-3">
@@ -47,6 +99,7 @@ const Login = () => {
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-3">
@@ -54,10 +107,11 @@ const Login = () => {
                   Password
                 </label>
                 <input
-                  type="email"
+                  type="password"
                   className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="mb-3">
@@ -68,15 +122,12 @@ const Login = () => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
+                  onChange={(e) => setConfirmPassword(e.target.value)}
                 />
               </div>
 
               <div class="d-grid gap-2 py-2">
-                <button
-                  type="submit"
-                  className="btn btn-success btn-block"
-                  onClick={signUp}
-                >
+                <button className="btn btn-success btn-block" onClick={signUp}>
                   SignUp
                 </button>
               </div>
@@ -102,7 +153,7 @@ const Login = () => {
               </h3>
               <p>Contribute to the growth of your favorite artists</p>
             </div>
-            <form className="bg-gray-700 py-10 px-10 shadow">
+            <form className="bg-gray-800 py-10 px-10 shadow">
               <div className="mb-3">
                 <label for="exampleInputEmail1" className="form-label">
                   Email address
@@ -111,7 +162,7 @@ const Login = () => {
                   type="email"
                   className="form-control"
                   id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-3">
@@ -122,15 +173,12 @@ const Login = () => {
                   type="password"
                   className="form-control"
                   id="exampleInputPassword1"
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
 
               <div class="d-grid gap-2 py-4">
-                <button
-                  type="submit"
-                  className="btn btn-success btn-block"
-                  onClick={login}
-                >
+                <button className="btn btn-success btn-block" onClick={login}>
                   Login
                 </button>
               </div>

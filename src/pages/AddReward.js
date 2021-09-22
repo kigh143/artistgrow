@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
 
-const AddPerson = () => {
+const AddReward = () => {
   return (
     <div className="container bg-gray-800 p-0">
       <Header />
@@ -12,9 +12,9 @@ const AddPerson = () => {
         <div className="col-md-6 py-10 text-center">
           <h2 className="text-4xl font-bold">Achieve your dream project</h2>
           <div className="flex justify-between my-10">
-            <span className="font-bold text-green-500">Add Artists</span>
+            <span className="font-bold">Add Artists</span>
             <span className="font-bold">Add Project</span>
-            <span className="font-bold">Add Rewards</span>
+            <span className="font-bold  text-green-500">Add Rewards</span>
           </div>
 
           <hr />
@@ -23,8 +23,8 @@ const AddPerson = () => {
 
         <div className="col-md-3"></div>
         <div className="col-md-6 py-10">
-          <h2 className="text-green-500 font-bold text-2xl">ARTIST DETAILS</h2>
-          <p>LET US KNOW MORE ABOUT YOU</p>
+          <h2 className="text-green-500 font-bold text-2xl">PROJECT DETAILS</h2>
+          <p>TELL US ABOUT YOUR PROJECT</p>
         </div>
         <div className="col-md-3"></div>
 
@@ -112,4 +112,4 @@ const AddPerson = () => {
   );
 };
 
-export default AddPerson;
+export default AddReward;

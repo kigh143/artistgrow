@@ -5,7 +5,7 @@ import Project from "../components/Project";
 
 const profile = () => {
   return (
-    <div className="container bg-gray-700 p-0">
+    <div className="container bg-gray-800 p-0">
       <Header />
       <div className="my-10 px-10 text-white">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((how) => (

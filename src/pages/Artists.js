@@ -5,7 +5,7 @@ import Artist from "../components/Artist";
 
 const Artists = () => {
   return (
-    <div className="container bg-gray-700 p-0">
+    <div className="container bg-gray-800 p-0">
       <Header />
       <div className="my-10 px-10 text-white">
         <div className="row">

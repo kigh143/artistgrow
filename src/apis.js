@@ -1,43 +1,31 @@
 const baseURL = "https://artist-grow-backend.herokuapp.com";
 export const api = {
-  registerUser() {
-    const user = {
-      fullName: "string",
-      email: "user@example.com",
-      password: "string",
-      confirm_password: "string",
-      user_type: "fan",
-    };
+  registerUser(user) {
     return fetch(`${baseURL}/api/v1/users/signup`, {
       method: "post",
-      body: user,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
     });
   },
-  loginUser() {
-    const user = {
-      fullName: "string",
-      email: "user@example.com",
-      password: "string",
-      confirm_password: "string",
-      user_type: "fan",
-    };
+  loginUser(user) {
     return fetch(`${baseURL}/api/v1/users/login`, {
       method: "post",
-      body: user,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
     });
   },
 
-  addProject() {
-    const project = {
-      fullName: "string",
-      email: "user@example.com",
-      password: "string",
-      confirm_password: "string",
-      user_type: "fan",
-    };
+  addProject(project) {
     return fetch(`${baseURL}/api/v1/artist/register`, {
       method: "post",
-      body: project,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(project),
     });
   },
   getAllProjects() {
@@ -50,16 +38,13 @@ export const api = {
     );
   },
 
-  editProfile(id) {
-    const user = {
-      id: "string",
-      profile_pic: "user@example.com",
-      gender: "string",
-      spotify_link: "string",
-    };
+  editProfile(user, id) {
     return fetch(`${baseURL}//api/v1/users/artist/update/${id}`, {
       method: "put",
-      body: user,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
     });
   },
 
