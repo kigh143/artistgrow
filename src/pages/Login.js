@@ -59,8 +59,8 @@ const Login = () => {
         {isNew ? (
           <div className="p-10">
             <div className="py-10 text-center">
-              <h3 className="text-white text-2xl font-bold text-green-400">
-                ARTIST-GROW
+              <h3 className="text-white text-2xl font-bold text-green-400 mb-10">
+                ARTIST.GROW
               </h3>
               <p>Contribute to the growth of your favorite artists</p>
             </div>
@@ -145,8 +145,8 @@ const Login = () => {
         ) : (
           <div className="p-10">
             <div className="py-10 text-center">
-              <h3 className="text-white text-2xl font-bold text-green-400">
-                ARTIST-GROW{" "}
+              <h3 className="text-white text-2xl font-bold text-green-400  mb-10">
+                ARTIST.GROW
               </h3>
               <h3 className="text-white text-1xl">
                 WELCOME BACK TO OUR PLATFORM

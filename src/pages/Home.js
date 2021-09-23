@@ -9,7 +9,7 @@ import Project from "../components/Project";
 
 const Home = () => {
   return (
-    <div className="container bg-gray-800 p-0">
+    <div className="container bg-gray-900 p-0">
       <Header />
       <Hero title="Be a true fan of your favorite artist." />
       <div className="py-10 px-10 my-10 text-white">
@@ -20,7 +20,7 @@ const Home = () => {
 
         <div className="row text-white">
           <div className="col-md-4 text-center">
-            <div className="p-10 bg-gray-600 m-2 shadow">
+            <div className="p-10 bg-gray-800 m-2 shadow">
               <div
                 style={{ height: 70, width: 70, borderRadius: 35 }}
                 className="bg-green-200 mx-auto my-4"
@@ -37,7 +37,7 @@ const Home = () => {
           </div>
 
           <div className="col-md-4 text-center">
-            <div className="p-10 bg-gray-600 m-2 shadow">
+            <div className="p-10 bg-gray-800 m-2 shadow">
               <div
                 style={{ height: 70, width: 70, borderRadius: 35 }}
                 className="bg-green-200 mx-auto my-4"
@@ -54,7 +54,7 @@ const Home = () => {
           </div>
 
           <div className="col-md-4 text-center">
-            <div className="p-10 bg-gray-600 m-2 shadow">
+            <div className="p-10 bg-gray-800 m-2 shadow">
               <div
                 style={{ height: 70, width: 70, borderRadius: 35 }}
                 className="bg-green-200 mx-auto my-4"
