@@ -4,6 +4,10 @@ import Header from "../components/Header";
 import Project from "../components/Project";
 
 const AddReward = () => {
+  const addReward =( event ) => {
+      event.preventDefault();
+
+  }
   return (
     <div className="container bg-gray-800 p-0">
       <Header />
@@ -12,9 +16,9 @@ const AddReward = () => {
         <div className="col-md-6 py-10 text-center">
           <h2 className="text-4xl font-bold">Achieve your dream project</h2>
           <div className="flex justify-between my-10">
-            <span className="font-bold">Add Artists</span>
-            <span className="font-bold">Add Project</span>
-            <span className="font-bold  text-green-500">Add Rewards</span>
+            <span className="font-bold ">Add Artists</span>
+            <span className="font-bold ">Add Project</span>
+            <span className="font-bold text-green-500">Add Rewards</span>
           </div>
 
           <hr />
@@ -23,84 +27,100 @@ const AddReward = () => {
 
         <div className="col-md-3"></div>
         <div className="col-md-6 py-10">
-          <h2 className="text-green-500 font-bold text-2xl">PROJECT DETAILS</h2>
-          <p>TELL US ABOUT YOUR PROJECT</p>
+          <h2 className="text-green-500 font-bold text-2xl">ARTIST DETAILS</h2>
+          <p>LET US KNOW MORE ABOUT YOU</p>
         </div>
         <div className="col-md-3"></div>
 
         <div className="col-md-3"></div>
         <div className="col-md-6">
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">
-                Email
+          <form className="g-3 p-2">
+          <div className="row p-4 shadow mb-2 bg-grey-800">
+          <div className="col-md-12 mb-3">
+              <b className="text-green-600">Silver Package</b>
+            </div>
+            <div className="col-md-6">
+              <label for="inputEmail4" className="form-label">
+                AGP
               </label>
-              <input type="email" class="form-control" id="inputEmail4" />
+              <input type="text" className="form-control" id="inputEmail4" name="genre" />
             </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">
-                Password
+            <div className="col-md-6">
+              <label for="inputPassword4" className="form-label">
+                Tracks
               </label>
-              <input type="password" class="form-control" id="inputPassword4" />
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
             </div>
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">
-                Address
+   
+            <div className="col-12">
+              <label for="inputAddress2" className="form-label">
+                other Rewards
               </label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputAddress"
-                placeholder="1234 Main St"
-              />
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
+
             </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">
-                Address 2
+          </div>
+
+          <div className="row p-4 shadow mb-2 bg-grey-800">
+            <div className="col-md-12 mb-3">
+              <b className="text-green-600">Brozen Package</b>
+            </div>
+            <div className="col-md-6">
+              <label for="inputEmail4" className="form-label">
+                AGP
               </label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputAddress2"
-                placeholder="Apartment, studio, or floor"
-              />
+              <input type="text" className="form-control" id="inputEmail4" name="genre" />
             </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">
-                City
+            <div className="col-md-6">
+              <label for="inputPassword4" className="form-label">
+                Tracks
               </label>
-              <input type="text" class="form-control" id="inputCity" />
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
             </div>
-            <div class="col-md-4">
-              <label for="inputState" class="form-label">
-                State
+   
+            <div className="col-12">
+              <label for="inputAddress2" className="form-label">
+                other Rewards
               </label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
+
             </div>
-            <div class="col-md-2">
-              <label for="inputZip" class="form-label">
-                Zip
+          </div>
+
+          <div className="row p-4 shadow mb-2 bg-grey-800">
+          <div className="col-md-12 mb-3">
+              <b className="text-green-600">Gold Package</b>
+            </div>
+            <div className="col-md-6">
+              <label for="inputEmail4" className="form-label">
+                AGP
               </label>
-              <input type="text" class="form-control" id="inputZip" />
+              <input type="text" className="form-control" id="inputEmail4" name="genre" />
             </div>
-            <div class="col-12">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="gridCheck"
-                />
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
-              </div>
+            <div className="col-md-6">
+              <label for="inputPassword4" className="form-label">
+                Tracks
+              </label>
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
             </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">
-                Register
+   
+            <div className="col-12">
+              <label for="inputAddress2" className="form-label">
+                other Rewards
+              </label>
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
+            </div>
+          </div>
+
+          
+           
+          
+            <div className="col-12">
+              <button type="submit" className="btn btn-light" onClick={addReward}>
+                Back
+              </button>
+              <button type="submit" className="btn btn-success" onClick={addReward}>
+                Apply
               </button>
             </div>
           </form>

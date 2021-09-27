@@ -12,12 +12,14 @@ import AddPerson from "./pages/AddPerson";
 import AddReward from "./pages/AddReward";
 import Artist from "./pages/Artist";
 import Fan from "./pages/Fan";
+import Loading from "./pages/Loading";
 
 const Navigation = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Loading} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/artists" component={Artists} />

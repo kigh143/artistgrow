@@ -1,12 +1,16 @@
 const KEY = "artist_grow";
 
-export const store = {
-  store(data) {
+export const storeService = {
+  save(data) {
     localStorage.setItem(KEY, JSON.stringify(data));
   },
   get() {
     const result = localStorage.getItem(KEY);
-    return JSON.parse(result);
+    if(result!== null ) {
+      return JSON.parse(result);
+    }else{
+      return null;
+    }
   },
   delete() {
     localStorage.clear();

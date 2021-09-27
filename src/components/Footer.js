@@ -40,16 +40,16 @@ const Footer = () => {
               width: "50%",
             }}
           >
-            <div class="input-group py-1">
+            <div className="input-group py-1">
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 placeholder="Recipient's username"
                 aria-label="Recipient's username"
                 aria-describedby="button-addon2"
               />
               <button
-                class="btn btn-outline-secondary"
+                className="btn btn-outline-secondary"
                 type="button"
                 id="button-addon2"
               >

@@ -22,10 +22,10 @@ const ProjectDetails = () => {
                 </div>
                 <br />
                 <p>
-                  <span class="badge bg-success mr-2">Primary</span>
-                  <span class="badge bg-success mr-2">Secondary</span>
-                  <span class="badge bg-success mr-2">Success</span>
-                  <span class="badge bg-success mr-2">Danger</span>
+                  <span className="badge bg-success mr-2">Primary</span>
+                  <span className="badge bg-success mr-2">Secondary</span>
+                  <span className="badge bg-success mr-2">Success</span>
+                  <span className="badge bg-success mr-2">Danger</span>
                 </p>
               </div>
               <div></div>

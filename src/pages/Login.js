@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { api } from "../apis";
+import { storeService } from "../store/store";
 
 const Login = () => {
   const [isNew, setIsNew] = useState(false);
@@ -9,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState(null);
   const [confirmPassword, setConfirmPassword] = useState(null);
   const [name, setName] = useState(null);
-  const [type, setType] = useState(null);
+  const [user_type, setUserType] = useState(null);
 
   const login = (e) => {
     e.preventDefault();
@@ -17,12 +18,13 @@ const Login = () => {
       email,
       password,
     };
-    console.log(payload);
     api
       .loginUser(payload)
       .then((result) => {
-        console.log(result);
-        // history.push("/");
+        console.log(result)
+        const info = { ...result.data,};
+        storeService.save(result.data);
+        history.push("/home");
       })
       .catch((error) => {
         console.log(error);
@@ -35,15 +37,17 @@ const Login = () => {
       password,
       confirm_password: confirmPassword,
       fullName: name,
-      user_type: type,
+      user_type
     };
-    console.log(payload);
-
+   console.log(payload)
     api
       .registerUser(payload)
       .then((result) => {
         console.log(result);
-        // history.push("/");
+        if(result['data']){
+          history.push("/login");
+        }
+
       })
       .catch((error) => {
         console.log(error);
@@ -70,14 +74,16 @@ const Login = () => {
                   User type
                 </label>
                 <select
-                  class="form-select"
+                  className="form-select"
                   aria-label="Default select example"
-                  onChange={(e) => setType(e.target.value)}
+                  onChange={(e) => setUserType(e.target.value)}
+                  value={user_type}
                 >
                   <option value="fan">Fan</option>
                   <option value="artist">Artists</option>
                 </select>
               </div>
+
               <div className="mb-3">
                 <label for="exampleInputEmail1" className="form-label">
                   Full Name
@@ -126,16 +132,16 @@ const Login = () => {
                 />
               </div>
 
-              <div class="d-grid gap-2 py-2">
+              <div className="d-grid gap-2 py-2">
                 <button className="btn btn-success btn-block" onClick={signUp}>
                   SignUp
                 </button>
               </div>
             </form>
-            <div class="d-grid gap-2 py-10">
+            <div className="d-grid gap-2 py-10">
               <button
                 type="button"
-                class="btn btn-outline-secondary"
+                className="btn btn-outline-secondary"
                 onClick={() => setIsNew(false)}
               >
                 Login
@@ -177,16 +183,16 @@ const Login = () => {
                 />
               </div>
 
-              <div class="d-grid gap-2 py-4">
+              <div className="d-grid gap-2 py-4">
                 <button className="btn btn-success btn-block" onClick={login}>
                   Login
                 </button>
               </div>
             </form>
-            <div class="d-grid gap-2 py-10">
+            <div className="d-grid gap-2 py-10">
               <button
                 type="button"
-                class="btn btn-outline-secondary"
+                className="btn btn-outline-secondary"
                 onClick={() => setIsNew(true)}
               >
                 create account

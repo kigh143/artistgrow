@@ -1,9 +1,15 @@
 import React, { Component } from "react";
+import { useHistory } from "react-router";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
 
 const AddProjects = () => {
+  const history = useHistory();
+  const addtrack = ( event ) => {
+    event.preventDefault();
+    history.push('addReward');
+  }
   return (
     <div className="container bg-gray-800 p-0">
       <Header />
@@ -12,7 +18,7 @@ const AddProjects = () => {
         <div className="col-md-6 py-10 text-center">
           <h2 className="text-4xl font-bold">Achieve your dream project</h2>
           <div className="flex justify-between my-10">
-            <span className="font-bold">Add Artists</span>
+            <span className="font-bold ">Add Artists</span>
             <span className="font-bold text-green-500">Add Project</span>
             <span className="font-bold">Add Rewards</span>
           </div>
@@ -23,83 +29,53 @@ const AddProjects = () => {
 
         <div className="col-md-3"></div>
         <div className="col-md-6 py-10">
-          <h2 className="text-green-500 font-bold text-2xl">PROJECT DETAILS</h2>
-          <p>TELL US ABOUT YOUR PROJECT</p>
+          <h2 className="text-green-500 font-bold text-2xl">ARTIST DETAILS</h2>
+          <p>LET US KNOW MORE ABOUT YOU</p>
         </div>
         <div className="col-md-3"></div>
 
         <div className="col-md-3"></div>
         <div className="col-md-6">
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">
-                Email
-              </label>
-              <input type="email" class="form-control" id="inputEmail4" />
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">
-                Password
-              </label>
-              <input type="password" class="form-control" id="inputPassword4" />
-            </div>
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">
-                Address
+          <form className="row g-3 p-2">
+           
+            <div className="col-12">
+              <label for="inputAddress" className="form-label">
+                Title
               </label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="inputAddress"
-                placeholder="1234 Main St"
+                name="full_name"
               />
             </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">
-                Address 2
+            <div className="col-md-4">
+              <label for="inputEmail4" className="form-label">
+                Genre
               </label>
-              <input
-                type="text"
-                class="form-control"
-                id="inputAddress2"
-                placeholder="Apartment, studio, or floor"
-              />
+              <input type="text" className="form-control" id="inputEmail4" name="genre" />
             </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">
-                City
+            <div className="col-md-4">
+              <label for="inputPassword4" className="form-label">
+                Number of tracks
               </label>
-              <input type="text" class="form-control" id="inputCity" />
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
             </div>
-            <div class="col-md-4">
-              <label for="inputState" class="form-label">
-                State
+            <div className="col-md-4">
+              <label for="inputPassword4" className="form-label">
+                project type
               </label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
             </div>
-            <div class="col-md-2">
-              <label for="inputZip" class="form-label">
-                Zip
+            <div className="col-12">
+              <label for="inputAddress2" className="form-label">
+                Description
               </label>
-              <input type="text" class="form-control" id="inputZip" />
+              <textarea cols={10} rows={3} className="form-control" ></textarea>
             </div>
-            <div class="col-12">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="gridCheck"
-                />
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
-              </div>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">
+          
+            <div className="col-12">
+              <button type="submit" className="btn btn-success" onClick={addtrack}>
                 Register
               </button>
             </div>

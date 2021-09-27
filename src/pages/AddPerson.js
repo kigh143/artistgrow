@@ -1,9 +1,30 @@
-import React, { Component } from "react";
+import React, { useState} from "react";
+import { useHistory } from "react-router";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
 
 const AddPerson = () => {
+
+  const [full_name, setFull_name] = useState("");
+  const [genre, setGenre] = useState("");
+  const [spotify_profile, setSpotify_profile] = useState("");
+  const [stage_name, setStage_name ] = useState("");
+  const history  = useHistory();
+
+  const addUser = (event) =>{
+    event.preventDefault();
+
+    const payload = {
+      full_name, genre, spotify_profile, stage_name
+    } 
+
+    history.push("/addProject")
+    
+
+
+  }
+
   return (
     <div className="container bg-gray-800 p-0">
       <Header />
@@ -30,76 +51,45 @@ const AddPerson = () => {
 
         <div className="col-md-3"></div>
         <div className="col-md-6">
-          <form class="row g-3">
-            <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">
-                Email
-              </label>
-              <input type="email" class="form-control" id="inputEmail4" />
-            </div>
-            <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">
-                Password
-              </label>
-              <input type="password" class="form-control" id="inputPassword4" />
-            </div>
-            <div class="col-12">
-              <label for="inputAddress" class="form-label">
-                Address
+          <form className="row g-3 p-2">
+           
+            <div className="col-12">
+              <label for="inputAddress" className="form-label">
+                Full Name
               </label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="inputAddress"
-                placeholder="1234 Main St"
+                name="full_name"
               />
             </div>
-            <div class="col-12">
-              <label for="inputAddress2" class="form-label">
-                Address 2
+            <div className="col-md-6">
+              <label for="inputEmail4" className="form-label">
+                Genre
+              </label>
+              <input type="text" className="form-control" id="inputEmail4" name="genre" />
+            </div>
+            <div className="col-md-6">
+              <label for="inputPassword4" className="form-label">
+                stage Name
+              </label>
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
+            </div>
+            <div className="col-12">
+              <label for="inputAddress2" className="form-label">
+                Spotify profile
               </label>
               <input
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="inputAddress2"
-                placeholder="Apartment, studio, or floor"
+                name="spotify_profile"
               />
             </div>
-            <div class="col-md-6">
-              <label for="inputCity" class="form-label">
-                City
-              </label>
-              <input type="text" class="form-control" id="inputCity" />
-            </div>
-            <div class="col-md-4">
-              <label for="inputState" class="form-label">
-                State
-              </label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
-            <div class="col-md-2">
-              <label for="inputZip" class="form-label">
-                Zip
-              </label>
-              <input type="text" class="form-control" id="inputZip" />
-            </div>
-            <div class="col-12">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="gridCheck"
-                />
-                <label class="form-check-label" for="gridCheck">
-                  Check me out
-                </label>
-              </div>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary">
+          
+            <div className="col-12">
+              <button type="submit" className="btn btn-success" onClick={addUser}>
                 Register
               </button>
             </div>

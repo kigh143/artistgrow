@@ -19,12 +19,12 @@ export class Artist extends Component {
         >
           <div>
             <h1 className="font-bold text-green-500 my-6">Ige Martins</h1>
-            <a class="btn btn-light" href="#" role="button">
+            <a className="btn btn-light" href="#" role="button">
               <small>HIP HOP</small>
             </a>
           </div>
           <div>
-            <Link to="/" class="btn btn-outline-success">
+            <Link to="/" className="btn btn-outline-success">
               View Project
             </Link>
           </div>
