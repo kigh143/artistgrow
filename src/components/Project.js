@@ -9,7 +9,7 @@ const Project = () => {
       </div>
       <div className="col-md-8 py-10">
         <p>
-          <b>19-09-2021</b>
+          <small>19-09-2021</small>
         </p>
         <div className="flex items-center my-2">
           <h1 className="text-3xl font-bold">Project title</h1>
@@ -32,7 +32,7 @@ const Project = () => {
           often held in a churchyard, usually in the late afternoon. 
         </p>
         <Link to="/project/12345" className="btn btn-success btn-lg">
-          Fund Project
+          <small>Fund Project</small>
         </Link>
       </div>
     </div>

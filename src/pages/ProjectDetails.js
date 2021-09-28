@@ -48,12 +48,51 @@ const ProjectDetails = () => {
           </div>
 
           <div className="row">
-            <div className="col-md-4"></div>
-            <div className="col-md-4"></div>
-            <div className="col-md-4"></div>
+            <div className="col-md-4">
+              <div className="p-2 m-2 bg-white">
+                <h3>Silver</h3>
+                <p>
+                  <small>Get 200 artist-grow points</small>
+                </p>
+                <p>
+                  <small>Access to 2 tracks on the album </small>
+                </p>
+                <h1 className="font-bold">
+                $50 - $500 
+                </h1>
+              </div>
+            </div>
+            <div className="col-md-4">
+            <div className="p-2 m-2 bg-white">
+                <h3>Brozen</h3>
+                <p>
+                  <small>Get 500 artist-grow points</small>
+                </p>
+                <p>
+                  <small>Access to  6 tracks on the album </small>
+                </p>
+                <h1 className="font-bold">
+                $501 - $1000 
+                </h1>
+              </div>
+            </div>
+            <div className="col-md-4">
+            <div className="p-2 m-2 bg-white">
+                <h3>Gold</h3>
+                <p>
+                  <small>Get 1000 artist-grow points</small>
+                </p>
+                <p>
+                  <small>Access to all tracks on the album  </small>
+                </p>
+                <h1 className="font-bold">
+                $1000 - $3000
+                </h1>
+              </div>
+            </div>
             <div className="col-md-12 my-10 text-center">
               <button className="btn btn-light btn-lg">
-                <small className="text-green-400">Make Payment</small>
+                <small className="text-green-400">PROCEED TO PAYMENT</small>
               </button>
             </div>
           </div>

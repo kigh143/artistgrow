@@ -1,14 +1,29 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
+import { HashLink as Link } from "react-router-hash-link";
+
 
 const AddProjects = () => {
+  
+  const [music_genre, setGenre] = useState("");
+  const [title, setTitle] = useState("");
+  const [type, setType] = useState("");
+  const [tracks, setTracks] = useState("");
+  const [date, setDate] = useState("");
+  const [description, setDescription] = useState("");
+
+
   const history = useHistory();
   const addtrack = ( event ) => {
     event.preventDefault();
     history.push('addReward');
+    const payload = {
+      music_genre, title, type, tracks, description, date
+    };
+    console.log(payload);
   }
   return (
     <div className="container bg-gray-800 p-0">
@@ -47,34 +62,46 @@ const AddProjects = () => {
                 className="form-control"
                 id="inputAddress"
                 name="full_name"
+                onChange={(e) => setTitle(e.target.value)}
               />
             </div>
             <div className="col-md-4">
               <label for="inputEmail4" className="form-label">
                 Genre
               </label>
-              <input type="text" className="form-control" id="inputEmail4" name="genre" />
+              <input type="text" className="form-control" id="inputEmail4" name="genre" 
+                onChange={(e) => setGenre(e.target.value)}
+                />
             </div>
             <div className="col-md-4">
               <label for="inputPassword4" className="form-label">
                 Number of tracks
               </label>
-              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name"
+                onChange={(e) => setTracks(e.target.value)}
+              />
             </div>
             <div className="col-md-4">
               <label for="inputPassword4" className="form-label">
                 project type
               </label>
-              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name"
+                onChange={(e) => setType(e.target.value)}
+                />
             </div>
             <div className="col-12">
               <label for="inputAddress2" className="form-label">
                 Description
               </label>
-              <textarea cols={10} rows={3} className="form-control" ></textarea>
+              <textarea cols={10} rows={3} className="form-control" 
+                onChange={(e) => setDescription(e.target.value)}
+                ></textarea>
             </div>
           
             <div className="col-12">
+            <Link to="/addPerson" className="btn btn-light mr-10">
+                Back
+              </Link>
               <button type="submit" className="btn btn-success" onClick={addtrack}>
                 Register
               </button>

@@ -13,7 +13,6 @@ const Start = () => {
     <div className="container bg-gray-800 p-0">
       <Header />
       <Hero title="Get your true fans’ support." />
-
       <div className="row">
         <div className="col-md-1"></div>
         <div className="col-md-10">
@@ -28,9 +27,8 @@ const Start = () => {
             </div>
 
             <div className="row text-white">
-              <div className="col-md-2"></div>
 
-              <div className="col-md-4  flex justify-center items-center">
+              <div className="col-md-5  flex justify-center items-center">
                 <img src="./p.png" style={{ width: "30%" }} />
               </div>
 
@@ -69,10 +67,9 @@ const Start = () => {
                 </div>
               </div>
 
-              <div className="col-md-4 flex justify-center items-center">
+              <div className="col-md-5 flex justify-center items-center">
                 <img src="./p.png" style={{ width: "30%" }} />
               </div>
-              <div className="col-md-2"></div>
             </div>
 
             <div className="my-10">

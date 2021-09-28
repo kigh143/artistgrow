@@ -9,19 +9,19 @@ const AddPerson = () => {
   const [full_name, setFull_name] = useState("");
   const [genre, setGenre] = useState("");
   const [spotify_profile, setSpotify_profile] = useState("");
-  const [stage_name, setStage_name ] = useState("");
+  const [gender, setGender] = useState("");
+
   const history  = useHistory();
 
   const addUser = (event) =>{
     event.preventDefault();
 
     const payload = {
-      full_name, genre, spotify_profile, stage_name
+      full_name, genre, spotify_profile, gender
     } 
-
+  console.log(payload)
     history.push("/addProject")
     
-
 
   }
 
@@ -62,19 +62,25 @@ const AddPerson = () => {
                 className="form-control"
                 id="inputAddress"
                 name="full_name"
+                onChange={(e) => setFull_name(e.target.value)}
+
               />
             </div>
             <div className="col-md-6">
               <label for="inputEmail4" className="form-label">
                 Genre
               </label>
-              <input type="text" className="form-control" id="inputEmail4" name="genre" />
+              <input type="text" className="form-control" id="inputEmail4" name="genre" 
+                onChange={(e) => setGenre(e.target.value)}
+                />
             </div>
             <div className="col-md-6">
               <label for="inputPassword4" className="form-label">
-                stage Name
+                Gender
               </label>
-              <input type="text" className="form-control" id="inputPassword4" name="stage_name" />
+              <input type="text" className="form-control" id="inputPassword4" name="stage_name" 
+                onChange={(e) => setGender(e.target.value)}
+                />
             </div>
             <div className="col-12">
               <label for="inputAddress2" className="form-label">
@@ -85,6 +91,8 @@ const AddPerson = () => {
                 className="form-control"
                 id="inputAddress2"
                 name="spotify_profile"
+                onChange={(e) => setSpotify_profile(e.target.value)}
+
               />
             </div>
           

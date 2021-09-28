@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Project from "../components/Project";
+import { HashLink as Link } from "react-router-hash-link";
+
 
 const AddReward = () => {
   const addReward =( event ) => {
@@ -112,13 +114,10 @@ const AddReward = () => {
             </div>
           </div>
 
-          
-           
-          
             <div className="col-12">
-              <button type="submit" className="btn btn-light" onClick={addReward}>
+              <Link to="/addProject" className="btn btn-light">
                 Back
-              </button>
+              </Link>
               <button type="submit" className="btn btn-success" onClick={addReward}>
                 Apply
               </button>
