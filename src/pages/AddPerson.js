@@ -98,7 +98,7 @@ const AddPerson = () => {
           
             <div className="col-12">
               <button type="submit" className="btn btn-success" onClick={addUser}>
-                Register
+                Next
               </button>
             </div>
           </form>

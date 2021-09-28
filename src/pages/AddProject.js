@@ -103,7 +103,7 @@ const AddProjects = () => {
                 Back
               </Link>
               <button type="submit" className="btn btn-success" onClick={addtrack}>
-                Register
+                Next
               </button>
             </div>
           </form>
