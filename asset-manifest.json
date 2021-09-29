@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/artistgrow/static/css/main.7d434ad3.chunk.css",
-    "main.js": "/artistgrow/static/js/main.ebf1cafc.chunk.js",
-    "main.js.map": "/artistgrow/static/js/main.ebf1cafc.chunk.js.map",
+    "main.js": "/artistgrow/static/js/main.dee55e60.chunk.js",
+    "main.js.map": "/artistgrow/static/js/main.dee55e60.chunk.js.map",
     "runtime-main.js": "/artistgrow/static/js/runtime-main.73b01c6a.js",
     "runtime-main.js.map": "/artistgrow/static/js/runtime-main.73b01c6a.js.map",
     "static/js/2.3b733631.chunk.js": "/artistgrow/static/js/2.3b733631.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.73b01c6a.js",
     "static/js/2.3b733631.chunk.js",
     "static/css/main.7d434ad3.chunk.css",
-    "static/js/main.ebf1cafc.chunk.js"
+    "static/js/main.dee55e60.chunk.js"
   ]
 }
