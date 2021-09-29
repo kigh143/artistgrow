@@ -79,6 +79,7 @@ const Login = () => {
                   onChange={(e) => setUserType(e.target.value)}
                   value={user_type}
                 >
+                  <option value=""></option>
                   <option value="fan">Fan</option>
                   <option value="artist">Artists</option>
                 </select>
